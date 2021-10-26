@@ -14,12 +14,26 @@ const theme = {
     primary: `"Zen Old Mincho", serif`,
     secondary: `"Playfair Display", serif`,
   },
-  maxWidth: {
-    xs: "479px",
-    s: "768px",
-    m: "1024px",
-    l: "1200px",
-    xl: "1799px",
+
+  max: {
+    xxs: "max-width: 339px",
+    xs: "max-width: 399px",
+    sm: "max-width: 479px",
+    md: "max-width: 768px",
+    lg: "max-width: 992px",
+    xl: "max-width: 1200px",
+    xxl: "max-width: 1400px",
+    xxxl: "max-width: 1800px",
+  },
+  min: {
+    xxs: "min-width: 340px",
+    xs: "min-width: 400px",
+    sm: "min-width: 480px",
+    md: "min-width: 769px",
+    lg: "min-width: 993px",
+    xl: "min-width: 1201px",
+    xxl: "min-width: 1401px",
+    xxxl: "min-width: 1801px",
   },
 };
 
