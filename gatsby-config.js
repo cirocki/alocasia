@@ -15,6 +15,21 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: "Open Sans",
+            weights: ["100", "400"],
+          },
+          {
+            family: "Zen Old Mincho",
+            weights: ["400"],
+          },
+        ],
+      },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
