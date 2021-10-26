@@ -2,15 +2,15 @@ import * as React from "react";
 import styled from "styled-components";
 import Layout from "../components/layout/layout";
 
-const IndexPage = () => {
+const ContactPage = () => {
   return (
     <Layout>
       <main>
-        <title>Alocasia Theme</title>
-        <h1>Alocasia Theme Homepage</h1>
+        <title>Contact page</title>
+        <h1>Contact example page</h1>
       </main>
     </Layout>
   );
 };
 
-export default IndexPage;
+export default ContactPage;
