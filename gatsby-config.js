@@ -21,11 +21,11 @@ module.exports = {
         fonts: [
           {
             family: "Open Sans",
-            weights: ["100", "400"],
+            weights: ["100", "400", "500", "700"],
           },
           {
-            family: "Zen Old Mincho",
-            weights: ["400"],
+            family: "Playfair Display",
+            weights: ["400, 700"],
           },
         ],
       },

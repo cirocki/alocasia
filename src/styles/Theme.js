@@ -11,7 +11,7 @@ const theme = {
     footerTextColor: "#828282",
   },
   fonts: {
-    primary: `"Zen Old Mincho", serif`,
+    primary: `"Open Sans", serif`,
     secondary: `"Playfair Display", serif`,
   },
 
