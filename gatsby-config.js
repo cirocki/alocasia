@@ -1,11 +1,10 @@
 module.exports = {
   siteMetadata: {
-    titleTemplate: "%s · The Real Hero",
+    titleTemplate: "%s | Gatsby Starter",
     description:
       "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
     url: "https://www.doe.com", // No trailing slash allowed!
     image: "/snape.jpg", // Path to the image placed in the 'static' folder, in the project's root directory.
-    twitterUsername: "@occlumency",
     title: "alocasia-theme",
   },
   plugins: [
