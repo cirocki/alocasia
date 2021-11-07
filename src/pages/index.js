@@ -7,10 +7,9 @@ const StyledHeading = styled.h1`
   font-family: ${(props) => props.theme.fonts.secondary};
 `;
 const IndexPage = () => {
-  console.log(SEO);
   return (
     <Layout>
-      <SEO description />
+      <SEO description title="Homepage" />
       <main>
         <title>Alocasia Theme</title>
         <StyledHeading>Alocasia Theme Homepage</StyledHeading>
