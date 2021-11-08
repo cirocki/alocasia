@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import Container from "../components/layout/container/Container";
 import Layout from "../components/layout/layout";
 import SEO from "../components/seo/seo";
 
@@ -12,7 +13,9 @@ const IndexPage = () => {
       <SEO description title="Homepage" />
       <main>
         <title>Alocasia Theme</title>
-        <StyledHeading>Alocasia Theme Homepage</StyledHeading>
+        <Container>
+          <StyledHeading>Alocasia Theme Homepage</StyledHeading>
+        </Container>
       </main>
     </Layout>
   );

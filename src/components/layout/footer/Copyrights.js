@@ -4,6 +4,12 @@ import { mainData } from "../../../data/mainData";
 
 const StyledWrapper = styled.div`
   padding: 1rem 0;
+  @media (${(props) => props.theme.max.md}) {
+    padding: 0.5rem 0;
+  }
+`;
+const StyledParagraph = styled.p`
+  font-size: 1.6rem;
   @media (${(props) => props.theme.max.xs}) {
     font-size: 1.4rem;
   }
@@ -17,12 +23,12 @@ export default function Copyrights() {
 
   return (
     <StyledWrapper>
-      <p>
+      <StyledParagraph>
         © {currentYear} {copyrightsOwner} -{" "}
         {language === "eng"
           ? "All rights reserved."
           : "Wszystkie prawa zastrzeżone."}
-      </p>
+      </StyledParagraph>
     </StyledWrapper>
   );
 }

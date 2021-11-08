@@ -6,8 +6,8 @@ const StyledDiv = styled.div`
   margin: 0 auto;
   padding: 0 2rem;
   position: relative;
-  @media (${(props) => props.theme.max.md}) {
-    padding: 0;
+  @media (${(props) => props.theme.max.xs}) {
+    padding: 0 1rem;
   }
 `;
 

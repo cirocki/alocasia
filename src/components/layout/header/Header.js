@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Container from "../container/Container";
+import Branding from "./Branding";
 
 const StyledHeader = styled.header`
   background: ${(props) => props.theme.colors.dark};
@@ -9,7 +11,9 @@ const StyledHeader = styled.header`
 export default function Header() {
   return (
     <StyledHeader>
-      <h1>Header</h1>
+      <Container>
+        <Branding />
+      </Container>
     </StyledHeader>
   );
 }
