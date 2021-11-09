@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 import { globalHistory as history } from "@reach/router";
 import logoImage from "../../../images/icons/iconmonstr-tree-8.svg";
 import { mainData } from "../../../data/mainData";
@@ -8,7 +9,7 @@ const StyledWrapper = styled.div`
   display: flex;
   align-items: center;
 `;
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   display: inline-flex;
   padding: 1rem 0;
 `;
