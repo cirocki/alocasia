@@ -4,22 +4,42 @@ import { globalHistory as history } from "@reach/router";
 import logoImage from "../../../images/icons/iconmonstr-tree-8.svg";
 import { mainData } from "../../../data/mainData";
 
+const StyledWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const StyledLink = styled.a`
+  display: inline-flex;
+  padding: 1rem 0;
+`;
+const StyledLogo = styled.img`
+  margin-right: 1rem;
+`;
+const StyledHeading = styled.h1`
+  color: ${(props) => props.theme.colors.white};
+`;
+const StyledSpan = styled.span`
+  color: ${(props) => props.theme.colors.white};
+`;
+
 export default function Branding() {
   const { location } = history;
   const path = location.pathname;
   const brandName = mainData.websiteTitle;
   return (
-    <div>
+    <StyledWrapper>
       {/* IF CURRENT URL IS INDEX, LOGO CLICK REDIRECTS TO PAGE TOP, OTHERWISE TO INDEX PAGE  */}
       {path === "/" ? (
-        <a href="#top">
-          <img src={logoImage} alt={`${brandName} Logo`} />
-        </a>
+        <StyledLink href="#top">
+          <StyledLogo src={logoImage} alt={`${brandName} Logo`} />
+          <StyledHeading>{brandName}</StyledHeading>
+        </StyledLink>
       ) : (
-        <a to="/">
-          <img src={logoImage} alt={`${brandName} Logo`} />
-        </a>
+        <StyledLink to="/">
+          <StyledLogo src={logoImage} alt={`${brandName} Logo`} />
+          <StyledSpan>{brandName}</StyledSpan>
+        </StyledLink>
       )}
-    </div>
+    </StyledWrapper>
   );
 }
