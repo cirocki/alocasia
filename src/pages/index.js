@@ -6,6 +6,7 @@ import SEO from "../components/seo/seo";
 
 const StyledHeading = styled.h1`
   font-family: ${(props) => props.theme.fonts.secondary};
+  font-size: 8rem;
   margin-top: 40rem;
   margin-bottom: 40rem;
 `;

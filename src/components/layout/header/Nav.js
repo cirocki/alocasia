@@ -27,14 +27,36 @@ const StyledList = styled.ul`
 const StyledItem = styled.li`
   margin: 0 1rem;
   display: flex;
+  position: relative;
+  display: inline-block;
   @media (${(props) => props.theme.max.md}) {
     margin: 0.5rem 0;
   }
 `;
+const StyledDropdownContent = styled.div`
+  position: absolute;
+  background: white;
+  border: 1px solid red;
+  display: none;
+  ${StyledItem}:hover & {
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
 const StyledLink = styled(Link)`
   padding: 0.5rem 1rem;
+
   @media (${(props) => props.theme.max.md}) {
     padding: 1rem;
+  }
+`;
+
+const StyledDropdownItem = styled.li`
+  margin: 0 1rem;
+  display: block;
+  @media (${(props) => props.theme.max.md}) {
+    margin: 0.5rem 0;
   }
 `;
 export default function Nav() {
@@ -44,6 +66,16 @@ export default function Nav() {
         {navItemsData.map((item) => (
           <StyledItem key={item.name}>
             <StyledLink to={item.path}>{item.name}</StyledLink>
+            {/* IF ITEMS HAVE CHILDS   */}
+            {item.childs && (
+              <StyledDropdownContent>
+                {item.childs.map((item) => (
+                  <StyledDropdownItem key={item.name}>
+                    <StyledLink to={item.path}>{item.name}</StyledLink>
+                  </StyledDropdownItem>
+                ))}
+              </StyledDropdownContent>
+            )}
           </StyledItem>
         ))}
       </StyledList>
