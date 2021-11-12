@@ -10,8 +10,9 @@ const StyledWrapper = styled.div`
   align-items: center;
 `;
 const StyledLink = styled(Link)`
-  display: inline-flex;
-  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
 `;
 const StyledLogo = styled.img`
   margin-right: 1rem;

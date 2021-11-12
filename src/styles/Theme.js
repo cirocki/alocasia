@@ -9,6 +9,7 @@ const theme = {
     grey: "#777",
     gold: "#968b63",
     footerTextColor: "#828282",
+    darkgrey: "#333",
   },
   fonts: {
     primary: `"Open Sans", serif`,
