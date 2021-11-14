@@ -12,20 +12,20 @@ export const navItemsData = [
     name: "Services",
     childs: [
       {
-        path: "/",
-        name: "Service1",
+        path: "/coding",
+        name: "Coding",
       },
       {
-        path: "/about",
-        name: "Service2",
+        path: "/design",
+        name: "Design",
       },
       {
-        path: "/",
-        name: "Service3",
+        path: "/seo",
+        name: "SEO",
       },
       {
-        path: "/about",
-        name: "Service4",
+        path: "/social",
+        name: "Social Media",
       },
     ],
   },

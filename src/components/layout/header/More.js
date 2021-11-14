@@ -4,6 +4,10 @@ import styled from "styled-components";
 const StyledPhoneWrapper = styled.div`
   display: flex;
   padding: 2rem 0;
+  transition: ${(props) => props.theme.transition.time} all ease;
+  &:hover {
+    color: ${(props) => props.theme.colors.white};
+  }
   @media (${(props) => props.theme.max.md}) {
     width: 100%;
   }

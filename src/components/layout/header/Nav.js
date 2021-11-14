@@ -35,28 +35,68 @@ const StyledItem = styled.li`
 `;
 const StyledDropdownContent = styled.div`
   position: absolute;
-  background: white;
-  border: 1px solid red;
+  background: ${(props) => props.theme.colors.dark};
+  /* border: 1px solid red; */
   display: none;
+  margin-top: 20px;
+  width: max-content;
   ${StyledItem}:hover & {
     display: flex;
     flex-direction: column;
+  }
+  &:before {
+    position: absolute;
+    background: transparent;
+    content: "";
+    height: 20px;
+    top: -20px;
+    width: 100%;
+    @media (${(props) => props.theme.max.md}) {
+      display: none;
+    }
+  }
+  @media (${(props) => props.theme.max.md}) {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    margin-top: 0;
   }
 `;
 
 const StyledLink = styled(Link)`
   padding: 0.5rem 1rem;
+  transition: ${(props) => props.theme.transition.time} all ease;
+  &:hover {
+    color: ${(props) => props.theme.colors.white};
+  }
 
   @media (${(props) => props.theme.max.md}) {
-    padding: 1rem;
+    display: block;
+    padding: 0.5rem 1rem;
+  }
+`;
+const StyledChildLink = styled(Link)`
+  padding: 1rem 0.5rem;
+  display: flex;
+
+  @media (${(props) => props.theme.max.md}) {
+    display: block;
+    padding: 0 0 0 3rem;
   }
 `;
 
 const StyledDropdownItem = styled.li`
   margin: 0 1rem;
   display: block;
+  transition: ${(props) => props.theme.transition.time} all ease;
+  &:hover {
+    color: ${(props) => props.theme.colors.white};
+  }
   @media (${(props) => props.theme.max.md}) {
     margin: 0.5rem 0;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
   }
 `;
 export default function Nav() {
@@ -71,7 +111,9 @@ export default function Nav() {
               <StyledDropdownContent>
                 {item.childs.map((item) => (
                   <StyledDropdownItem key={item.name}>
-                    <StyledLink to={item.path}>{item.name}</StyledLink>
+                    <StyledChildLink to={item.path}>
+                      {item.name}
+                    </StyledChildLink>
                   </StyledDropdownItem>
                 ))}
               </StyledDropdownContent>

@@ -15,6 +15,9 @@ const theme = {
     primary: `"Open Sans", serif`,
     secondary: `"Playfair Display", serif`,
   },
+  transition: {
+    time: "0.2s",
+  },
 
   max: {
     xxs: "max-width: 339px",
