@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import Container from "../components/layout/container/Container";
 import Layout from "../components/layout/layout";
-import SEO from "../components/seo/seo";
+import Seo from "../components/seo/Seo";
 
 const StyledHeading = styled.h1`
   font-family: ${(props) => props.theme.fonts.secondary};
@@ -13,7 +13,7 @@ const StyledHeading = styled.h1`
 const IndexPage = () => {
   return (
     <Layout>
-      <SEO description title="Homepage" />
+      <Seo description="Description" title="Homepage" />
       <main>
         <title>Alocasia Theme</title>
         <Container>

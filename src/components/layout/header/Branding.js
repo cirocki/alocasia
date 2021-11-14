@@ -32,7 +32,7 @@ export default function Branding() {
     <StyledWrapper>
       {/* IF CURRENT URL IS INDEX, LOGO CLICK REDIRECTS TO PAGE TOP, OTHERWISE TO INDEX PAGE  */}
       {path === "/" ? (
-        <StyledLink href="#top">
+        <StyledLink to="#top">
           <StyledLogo src={logoImage} alt={`${brandName} Logo`} />
           <StyledHeading>{brandName}</StyledHeading>
         </StyledLink>

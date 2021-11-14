@@ -14,23 +14,23 @@ const SEO = ({ title, description, image, article }) => {
     siteUrl,
     defaultImage,
   } = site.siteMetadata;
-  const seo = {
+  const SEO = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   };
   return (
-    <Helmet title={seo.title} titleTemplate={titleTemplate}>
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
-      {seo.url && <meta property="og:url" content={seo.url} />}
+    <Helmet title={SEO.title} titleTemplate={titleTemplate}>
+      <meta name="description" content={SEO.description} />
+      <meta name="image" content={SEO.image} />
+      {SEO.url && <meta property="og:url" content={SEO.url} />}
       {(article ? true : null) && <meta property="og:type" content="article" />}
-      {seo.title && <meta property="og:title" content={seo.title} />}
-      {seo.description && (
-        <meta property="og:description" content={seo.description} />
+      {SEO.title && <meta property="og:title" content={SEO.title} />}
+      {SEO.description && (
+        <meta property="og:description" content={SEO.description} />
       )}
-      {seo.image && <meta property="og:image" content={seo.image} />}
+      {SEO.image && <meta property="og:image" content={SEO.image} />}
     </Helmet>
   );
 };

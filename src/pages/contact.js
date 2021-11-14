@@ -1,11 +1,11 @@
 import * as React from "react";
 import Layout from "../components/layout/layout";
-import SEO from "../components/seo/seo";
+import Seo from "../components/seo/Seo";
 
 const ContactPage = () => {
   return (
     <Layout>
-      <SEO description title="Contact" />
+      <Seo description="contact desc" title="Contact" />
       <main>
         <title>Contact page</title>
         <h1>Contact example page</h1>

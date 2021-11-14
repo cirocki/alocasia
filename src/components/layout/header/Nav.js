@@ -33,7 +33,7 @@ const StyledItem = styled.li`
     margin: 0.5rem 0;
   }
 `;
-const StyledDropdownContent = styled.div`
+const StyledDropdownContent = styled.ul`
   position: absolute;
   background: ${(props) => props.theme.colors.dark};
   /* border: 1px solid red; */

@@ -18,7 +18,6 @@ const theme = {
   transition: {
     time: "0.2s",
   },
-
   max: {
     xxs: "max-width: 339px",
     xs: "max-width: 399px",

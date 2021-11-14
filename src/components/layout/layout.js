@@ -6,9 +6,6 @@ import GlobalStyle from "../../styles/GlobalStyle";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 
-console.log(Theme);
-console.log(GlobalStyle);
-
 export default function Layout({ children }) {
   return (
     <>
