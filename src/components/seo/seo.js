@@ -7,18 +7,13 @@ import { useStaticQuery, graphql } from "gatsby";
 const SEO = ({ title, description, image, article }) => {
   const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
-  const {
-    defaultTitle,
-    titleTemplate,
-    defaultDescription,
-    siteUrl,
-    defaultImage,
-  } = site.siteMetadata;
+  const { defaultTitle, titleTemplate, defaultDescription, url, defaultImage } =
+    site.siteMetadata;
   const SEO = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image || defaultImage}`,
-    url: `${siteUrl}${pathname}`,
+    image: `${url}${image || defaultImage}`,
+    url: `${url}${pathname}`,
   };
   return (
     <Helmet title={SEO.title} titleTemplate={titleTemplate}>
@@ -54,7 +49,7 @@ const query = graphql`
         defaultTitle: title
         titleTemplate
         defaultDescription: description
-        siteUrl: url
+        url: url
         defaultImage: image
       }
     }
