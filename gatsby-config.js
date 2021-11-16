@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     titleTemplate: "%s | Alocasia Starter Theme",
     description: "Gatsby.js custom starter theme.",
-    url: "https://cirocki.pl", // No trailing slash allowed!
+    url: "https://alocasia.netlify.app", // No trailing slash allowed!
     image: "/snape.jpg", // Path to the image placed in the 'static' folder, in the project's root directory.
     title: "Title from config",
   },
