@@ -28,7 +28,7 @@ module.exports = {
           },
           {
             family: "Playfair Display",
-            weights: ["400, 700"],
+            weights: ["400", "700"],
           },
         ],
       },
