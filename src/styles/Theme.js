@@ -7,7 +7,7 @@ const theme = {
     light: "#f2f2f2",
     white: "#fff",
     grey: "#777",
-    gold: "#968b63",
+    primary: "#00553d",
     footerTextColor: "#828282",
     darkgrey: "#333",
   },

@@ -6,6 +6,9 @@ import Hamburger from "./Hamburger";
 import More from "./More";
 import Nav from "./Nav";
 
+const StyledDummyHeader = styled.header`
+  min-height: 64px;
+`;
 const StyledHeader = styled.header`
   background: ${(props) => props.theme.colors.dark};
   position: fixed;
@@ -13,8 +16,6 @@ const StyledHeader = styled.header`
   right: 0px;
   left: 0px;
   z-index: 999;
-  @media (${(props) => props.theme.max.md}) {
-  }
 `;
 const StyledWrapper = styled.div`
   display: flex;
@@ -56,19 +57,21 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
   return (
-    <StyledHeader>
-      <Container>
-        <StyledWrapper isOpen={isOpen}>
-          <StyledTopPart>
-            <Branding />
-            <Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
-          </StyledTopPart>
-          <StyledBottomPart isOpen={isOpen}>
-            <Nav />
-            <More />
-          </StyledBottomPart>
-        </StyledWrapper>
-      </Container>
-    </StyledHeader>
+    <StyledDummyHeader>
+      <StyledHeader>
+        <Container>
+          <StyledWrapper isOpen={isOpen}>
+            <StyledTopPart>
+              <Branding />
+              <Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
+            </StyledTopPart>
+            <StyledBottomPart isOpen={isOpen}>
+              <Nav />
+              <More />
+            </StyledBottomPart>
+          </StyledWrapper>
+        </Container>
+      </StyledHeader>
+    </StyledDummyHeader>
   );
 }
